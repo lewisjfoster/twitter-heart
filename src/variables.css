@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --white: #fff;
+    --unselected: #aab8c2;
+    --selected: #e2264d;
+    --background: #ecf0f1;
+    --blue: #91d2fa;
+    --purple: #cc8ef5;
+    --green: #8ce8c3;
+    --pink: #f48ea7;
+    --lime: #b5e1ae;
+
+    /* Heart */
+    --heart-size: 8em;
+
+    /* Bubble */
+    --bubble-diameter: 18rem;
+    --bubble-radius: calc(var(--bubble-diameter) * 0.5);
+
+    /* Particle */
+    --particle-diameter: 1.5rem;
+    --particle-radius: calc(var(--particle-diameter) * 0.5);
+}

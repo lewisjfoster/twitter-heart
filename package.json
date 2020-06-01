@@ -1,0 +1,28 @@
+{
+  "homepage": "https://lewisjfoster.github.io/twitter-heart/",
+  "name": "twitter-heart",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Lewis Foster <lewisjfoster>",
+  "license": "UNLICENSED",
+  "main": "index.html",
+  "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.6",
+    "parcel-bundler": "^1.12.4",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.5.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0"
+  }
+}

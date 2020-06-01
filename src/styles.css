@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: var(--background);
+    user-select: none;
+}
+
+[id='toggle-heart'] {
+    position: absolute;
+    left: -100vw;
+
+    &:focus + label {
+        text-shadow:
+            0 0 1px var(--white),
+            0 1px 1px var(--white),
+            0 -1px 1px var(--white),
+            1px 0 1px var(--white),
+            -1px 0 1px var(--white);
+    }
+
+    &:checked + label {
+        color: var(--selected);
+        will-change: font-size;
+        animation: heart 1s cubic-bezier(0.15, 0.9, 0.3, 1.5);
+    }
+
+    &:checked + label::before,
+    &:checked + label::after {
+        animation: inherit;
+        animation-timing-function: ease-out;
+    }
+
+    &:checked + label::before {
+        will-change: transform, border-width, border-color;
+        animation-name: bubble;
+    }
+
+    &:checked + label::after {
+        will-change: opacity, box-shadow, color;
+        animation-name: particles;
+    }
+}
+
+[for='toggle-heart'] {
+    position: relative;
+    color: var(--unselected);
+    font-size: var(--heart-size);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        content: '';
+    }
+
+    &::before {
+        box-sizing: border-box;
+        margin: calc(var(--bubble-radius) * -1);
+        height: var(--bubble-diameter);
+        width: var(--bubble-diameter);
+        border: solid var(--bubble-radius) var(--selected);
+        transform: scale(0);
+    }
+
+    &::after {
+        margin: calc(var(--particle-radius) * -1);
+        height: var(--particle-diameter);
+        width: var(--particle-diameter);
+        box-shadow:
+            -1rem -11rem 0 -0.75rem var(--purple),
+            1rem -12rem 0 -0.75rem var(--blue),
+            7rem -8rem 0 -0.75rem var(--pink),
+            10rem -6rem 0 -0.75rem var(--purple),
+            11rem 1rem 0 -0.75rem var(--lime),
+            11rem 4rem 0 -0.75rem var(--green),
+            6rem 9rem 0 -0.75rem var(--purple),
+            4rem 11rem 0 -0.75rem var(--pink),
+            -3rem 10rem 0 -0.75rem var(--green),
+            -6rem 10rem 0 -0.75rem var(--blue),
+            -10rem 4rem 0 -0.75rem var(--blue),
+            -12rem 1rem 0 -0.75rem var(--blue),
+            -9rem -6rem 0 -0.75rem var(--green),
+            -9rem -8rem 0 -0.75rem var(--lime);
+    }
+}
+
+@keyframes heart {
+    0%,
+    17.5% { font-size: 0; }
+}
+
+@keyframes bubble {
+    15% {
+        transform: scale(1);
+        border-color: var(--purple);
+        border-width: var(--bubble-radius);
+    }
+
+    30%,
+    100% {
+        transform: scale(1);
+        border-color: var(--purple);
+        border-width: 0;
+    }
+}
+
+@keyframes particles {
+    0%,
+    20% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        box-shadow:
+            -1rem -8rem 0 0 var(--blue),
+            1rem -10rem 0 0 var(--blue),
+            6rem -6rem 0 0 var(--purple),
+            8rem -5rem 0 0 var(--purple),
+            8rem 1rem 0 0 var(--green),
+            9rem 3rem 0 0 var(--green),
+            5rem 7rem 0 0 var(--pink),
+            3rem 9rem 0 0 var(--pink),
+            -2rem 8rem 0 0 var(--blue),
+            -5rem 8rem 0 0 var(--blue),
+            -8rem 3rem 0 0 var(--purple),
+            -10rem 1rem 0 0 var(--blue),
+            -7rem -4rem 0 0 var(--green),
+            -7rem -7rem 0 0 var(--green);
+    }
+}

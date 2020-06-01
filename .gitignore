@@ -1,0 +1,13 @@
+# Node Dependencies
+/node_modules
+
+# Builds
+/build
+/dist
+
+# Misc
+.DS_Store
+.cache
+*.log
+yarn-debug.log*
+yarn-error.log*
