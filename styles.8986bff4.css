@@ -1,4 +1,54 @@
 body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #ecf0f1;
+}
+
+.footer {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    background-color: #000;
+    color: #ecf0f1;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-family: "Lucida Console", Monaco, monospace;
+    margin: 3rem;
+    width: 100%;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform
+}
+
+.button:hover,
+    .button:focus,
+    .button:active {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+    }
+
+@media (min-width: 768px) {
+
+.button {
+        width: auto
+}
+    }
+
+.heart-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8,14 +58,11 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    background-color: #ecf0f1;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+    height: 100vh;
 }
 
 [id='toggle-heart'] {
