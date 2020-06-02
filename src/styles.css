@@ -1,12 +1,47 @@
 body {
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--clouds);
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    background-color: var(--black);
+    color: var(--clouds);
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-family: "Lucida Console", Monaco, monospace;
+    margin: 3rem;
+    width: 100%;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    &:hover,
+    &:focus,
+    &:active {
+        transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+        width: auto;
+    }
+}
+
+.heart-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    background-color: var(--background);
     user-select: none;
+    height: 100vh;
 }
 
 [id='toggle-heart'] {
@@ -23,7 +58,7 @@ body {
     }
 
     &:checked + label {
-        color: var(--selected);
+        color: var(--crimson);
         will-change: font-size;
         animation: heart 1s cubic-bezier(0.15, 0.9, 0.3, 1.5);
     }
@@ -47,7 +82,7 @@ body {
 
 [for='toggle-heart'] {
     position: relative;
-    color: var(--unselected);
+    color: var(--silver);
     font-size: var(--heart-size);
     cursor: pointer;
 
@@ -66,7 +101,7 @@ body {
         margin: calc(var(--bubble-radius) * -1);
         height: var(--bubble-diameter);
         width: var(--bubble-diameter);
-        border: solid var(--bubble-radius) var(--selected);
+        border: solid var(--bubble-radius) var(--crimson);
         transform: scale(0);
     }
 
