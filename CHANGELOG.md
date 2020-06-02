@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/lewisjfoster/twitter-heart/compare/v1.1.0...v1.1.1) (2020-06-02)
+
+
+### Bug Fixes
+
+* vertical alignment ([0e0c598](https://github.com/lewisjfoster/twitter-heart/commit/0e0c5985cf87ba22c2946fd987a8f891cb5c37c6))
+
+
+
 # [1.1.0](https://github.com/lewisjfoster/twitter-heart/compare/v1.0.0...v1.1.0) (2020-06-02)
 
 
