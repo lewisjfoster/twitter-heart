@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/lewisjfoster/twitter-heart/compare/v1.1.1...v1.1.2) (2020-06-02)
+
+
+### Bug Fixes
+
+* button hover ([0e2e586](https://github.com/lewisjfoster/twitter-heart/commit/0e2e5868109da45d35dc7ae6f0aeae333949efb4))
+
+
+
 ## [1.1.1](https://github.com/lewisjfoster/twitter-heart/compare/v1.1.0...v1.1.1) (2020-06-02)
 
 
