@@ -9,7 +9,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "dev": "parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /twitter-heart/"
   },
   "devDependencies": {
