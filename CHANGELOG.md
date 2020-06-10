@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/lewisjfoster/twitter-heart/compare/v1.1.2...v1.2.0) (2020-06-10)
+
+
+### Features
+
+* updated background color ([4eac439](https://github.com/lewisjfoster/twitter-heart/commit/4eac4390453f96c4ca549db4677145205d7b42ef))
+
+
+
 ## [1.1.2](https://github.com/lewisjfoster/twitter-heart/compare/v1.1.1...v1.1.2) (2020-06-02)
 
 
@@ -36,10 +45,6 @@
 ### BREAKING CHANGES
 
 * deploy to gh-pages
-
-
-
-## 0.0.1 (2020-06-01)
 
 
 
