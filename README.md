@@ -23,7 +23,7 @@ yarn install
 2. To start a development server
 
 ```
-yarn dev
+yarn start
 ```
 
 3. To build for production
